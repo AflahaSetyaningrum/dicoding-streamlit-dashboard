@@ -28,7 +28,13 @@ pip install -r requirements.txt
 
 ## Menjalankan Streamlit App
 
-Jalankan salah satu dari file dashboard yang tersedia:
+### Akses Online (Live Demo)
+Anda juga bisa mengakses dashboard secara langsung melalui link berikut tanpa perlu instalasi:
+
+🔗 **[Dicoding Dashboard - Live Demo](https://dicoding-dashboard-aflaha.streamlit.app/)**
+
+### Jalankan Lokal
+Untuk menjalankan dashboard di komputer lokal Anda:
 
 ```bash
 # Versi utama (root)

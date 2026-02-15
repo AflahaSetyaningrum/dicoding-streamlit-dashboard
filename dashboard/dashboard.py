@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from datetime import datetime, timedelta
+from PIL import Image
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -144,9 +145,17 @@ st.write("Dashboard ini menampilkan analisis interaktif dari E-Commerce dataset 
 # ============================================================================
 # SIDEBAR - INTERACTIVE FILTERS
 # ============================================================================
-st.sidebar.markdown("## 🎯 FILTER INTERAKTIF")
-st.sidebar.markdown("*Pilih filter untuk mengupdate visualisasi secara real-time*")
-st.sidebar.markdown("---")
+# Display logo at the top of sidebar
+try:
+    logo = Image.open('dashboard/logo1.png')
+    with st.sidebar:
+        col1, col2, col3 = st.columns([1, 2, 1])
+        with col2:
+            st.image(logo, width=180)
+        st.markdown("<hr style='margin: 2px 0px; padding: 0px;'>", unsafe_allow_html=True)
+except:
+    st.sidebar.warning("⚠️ Logo tidak ditemukan. Pastikan 'dashboard/logo1.png' ada di folder.")
+    st.markdown("<hr style='margin: 2px 0px; padding: 0px;'>", unsafe_allow_html=True)
 
 # FILTER 1: Date Range (REQUIRED)
 st.sidebar.markdown("### 📅 Filter 1: Rentang Tanggal")
